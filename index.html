@@ -29,9 +29,17 @@ GA1监控流量！
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-120513978-1', 'auto');
+  /**
+   * 第二参数： 跟踪ID
+   * 第三参数： Cookie网域
+   * 第四参数： 跟踪器名称
+   */
+  ga('create', 'UA-120513978-1', 'auto', 'myTracker');
   ga('send', 'pageview');
-  console.log(ga.q);
+  ga(function() {
+    // Logs the "myTracker" tracker object to the console.
+    console.log(ga.getByName('myTracker'));
+  });
 </script>
 <!-- End Google Analytics -->
 
