@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        /**
+         * 第二参数： 跟踪ID
+         * 第三参数： Cookie网域
+         * 第四参数： 跟踪器名称
+         */
+        ga('create', 'UA-120513978-1', 'auto', 'myTracker');
+        ga('send', 'pageview');
+        ga(function() {
+            // Logs the "myTracker" tracker object to the console.
+            console.log(ga.getByName('myTracker'));
+        });
+    </script>
+    <!-- End Google Analytics -->
 </head>
 <body>
 GA1监控流量！
@@ -21,27 +41,6 @@ GA1监控流量！
 
   <!--gtag('config', 'UA-120513978-1');-->
 <!--</script>-->
-
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  /**
-   * 第二参数： 跟踪ID
-   * 第三参数： Cookie网域
-   * 第四参数： 跟踪器名称
-   */
-  ga('create', 'UA-120513978-1', 'auto', 'myTracker');
-  ga('send', 'pageview');
-  ga(function() {
-    // Logs the "myTracker" tracker object to the console.
-    console.log(ga.getByName('myTracker'));
-  });
-</script>
-<!-- End Google Analytics -->
 
 </body>
 </html>
